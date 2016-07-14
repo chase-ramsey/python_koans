@@ -18,7 +18,12 @@
 #
 def triangle(a, b, c):
     # DELETE 'PASS' AND WRITE THIS CODE
-    if a == b and b == c and a == c:
+    aa, bb, cc = sorted([a, b, c])
+    if aa + bb <= cc:
+      raise TriangleError()
+    elif a <= 0 or b <= 0 or c <= 0:
+      raise TriangleError()
+    elif a == b and b == c and a == c:
       return 'equilateral'
     elif a == b or b == c or a == c:
       return 'isosceles'
