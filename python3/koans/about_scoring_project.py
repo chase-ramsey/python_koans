@@ -34,7 +34,10 @@ from runner.koan import *
 
 def score(dice):
     # You need to write this method
-    pass
+    score = 0
+
+
+    return score
 
 class AboutScoringProject(Koan):
     def test_score_of_an_empty_list_is_zero(self):
@@ -70,3 +73,4 @@ class AboutScoringProject(Koan):
     def test_ones_not_left_out(self):
         self.assertEqual(300, score([1,2,2,2]))
         self.assertEqual(350, score([1,5,2,2,2]))
+
